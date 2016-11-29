@@ -11,6 +11,6 @@ s.source   = {
 }
 s.ios.deployment_target = '8.0'
 s.source_files = "Source/STQRCodeController/*.{h,m}"
-s.resource_files = ""Source/Resource/STQRCodeController.bundle"
+s.resource = "Source/Resource/STQRCodeController.bundle"
 s.requires_arc = true
 end
