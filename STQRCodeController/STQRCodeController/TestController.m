@@ -8,6 +8,7 @@
 
 #import "TestController.h"
 #import "STQRCodeController.h"
+#import "STQRCodeAlert.h"
 @interface TestController ()<STQRCodeControllerDelegate>
 /** 1. */
 @property(nonatomic, strong)UIButton *buttonGoQR;
@@ -30,6 +31,7 @@
 {
      NSLog(@"%s %@", __FUNCTION__, readerScanResult);
      NSLog(@"%s %lu", __FUNCTION__, (unsigned long)resultType);
+    [STQRCodeAlert showWithTitle:readerScanResult];
 }
 #pragma mark - --- 3.event response 事件相应 ---
 

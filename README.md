@@ -25,7 +25,8 @@
     <key>NSPhotoLibraryUsageDescription</key>
     <string>开启相册</string>
  
-
+# 效果图
+![](https://raw.githubusercontent.com/STShenZhaoliang/STImage/master/STQRCodeController/STQRCodeController.gif)
 
 # 版本信息
 ## 1.0
