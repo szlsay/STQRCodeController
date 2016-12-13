@@ -58,9 +58,20 @@
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
     if (authStatus == AVAuthorizationStatusAuthorized) {
         [self.readview startScan];
-    }else {
+    }else if(authStatus == AVAuthorizationStatusNotDetermined){
+        [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(observeAuthrizationStatusChange:) userInfo:nil repeats:YES];
+    }else{
         [STQRCodeAlert showWithTitle:@"请在设置中开启摄像头权限"];
         [self.readview stopScan];
+    }
+}
+
+- (void)observeAuthrizationStatusChange:(NSTimer *)sender{
+    NSString *mediaType = AVMediaTypeVideo;
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+    if (authStatus == AVAuthorizationStatusAuthorized) {
+        [sender invalidate];
+        [self.readview startScan];
     }
 }
 

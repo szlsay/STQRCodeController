@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:STQRCodeController.xcodeproj">
+      location = "self:STQRCodeControllerDemo.xcodeproj">
    </FileRef>
 </Workspace>

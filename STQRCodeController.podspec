@@ -10,7 +10,7 @@ s.source   = {
 :tag => s.version.to_s
 }
 s.ios.deployment_target = '8.0'
-s.source_files = "Source/STQRCodeController/*.{h,m}"
-s.resource = "Source/Resource/STQRCodeController.bundle"
+s.source_files = "STQRCodeController/*.{h,m}"
+s.resource = "STQRCodeController/STQRCodeController.bundle"
 s.requires_arc = true
 end

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  STQRCodeController
+//  STQRCodeControllerDemo
 //
-//  Created by ST on 16/11/28.
+//  Created by ST on 16/11/29.
 //  Copyright © 2016年 ST. All rights reserved.
 //
 

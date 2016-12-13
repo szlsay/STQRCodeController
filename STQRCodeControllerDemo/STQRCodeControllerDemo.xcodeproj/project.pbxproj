@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		708551041DFFF3E700C243ED /* NSBundle+STQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 708550FA1DFFF3E700C243ED /* NSBundle+STQRCodeController.m */; };
+		708551051DFFF3E700C243ED /* STQRCodeAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 708550FC1DFFF3E700C243ED /* STQRCodeAlert.m */; };
+		708551061DFFF3E700C243ED /* STQRCodeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 708550FE1DFFF3E700C243ED /* STQRCodeConst.m */; };
+		708551071DFFF3E700C243ED /* STQRCodeController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 708550FF1DFFF3E700C243ED /* STQRCodeController.bundle */; };
+		708551081DFFF3E700C243ED /* STQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 708551011DFFF3E700C243ED /* STQRCodeController.m */; };
+		708551091DFFF3E700C243ED /* STQRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 708551031DFFF3E700C243ED /* STQRCodeReaderView.m */; };
+		7085510C1DFFF43300C243ED /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7085510B1DFFF43300C243ED /* TestController.m */; };
+		7092D4BC1DED69ED00E9A998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7092D4BB1DED69ED00E9A998 /* main.m */; };
+		7092D4BF1DED69ED00E9A998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7092D4BE1DED69ED00E9A998 /* AppDelegate.m */; };
+		7092D4C71DED69ED00E9A998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7092D4C61DED69ED00E9A998 /* Assets.xcassets */; };
+		7092D4CA1DED69ED00E9A998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7092D4C81DED69ED00E9A998 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		708550F91DFFF3E700C243ED /* NSBundle+STQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+STQRCodeController.h"; sourceTree = "<group>"; };
+		708550FA1DFFF3E700C243ED /* NSBundle+STQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+STQRCodeController.m"; sourceTree = "<group>"; };
+		708550FB1DFFF3E700C243ED /* STQRCodeAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeAlert.h; sourceTree = "<group>"; };
+		708550FC1DFFF3E700C243ED /* STQRCodeAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeAlert.m; sourceTree = "<group>"; };
+		708550FD1DFFF3E700C243ED /* STQRCodeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeConst.h; sourceTree = "<group>"; };
+		708550FE1DFFF3E700C243ED /* STQRCodeConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeConst.m; sourceTree = "<group>"; };
+		708550FF1DFFF3E700C243ED /* STQRCodeController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = STQRCodeController.bundle; sourceTree = "<group>"; };
+		708551001DFFF3E700C243ED /* STQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeController.h; sourceTree = "<group>"; };
+		708551011DFFF3E700C243ED /* STQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeController.m; sourceTree = "<group>"; };
+		708551021DFFF3E700C243ED /* STQRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeReaderView.h; sourceTree = "<group>"; };
+		708551031DFFF3E700C243ED /* STQRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeReaderView.m; sourceTree = "<group>"; };
+		7085510A1DFFF43300C243ED /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
+		7085510B1DFFF43300C243ED /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
+		7092D4B71DED69ED00E9A998 /* STQRCodeControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STQRCodeControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7092D4BB1DED69ED00E9A998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7092D4BD1DED69ED00E9A998 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7092D4BE1DED69ED00E9A998 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7092D4C61DED69ED00E9A998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7092D4C91DED69ED00E9A998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7092D4CB1DED69ED00E9A998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7092D4B41DED69ED00E9A998 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		708550F81DFFF3E700C243ED /* STQRCodeController */ = {
+			isa = PBXGroup;
+			children = (
+				708550F91DFFF3E700C243ED /* NSBundle+STQRCodeController.h */,
+				708550FA1DFFF3E700C243ED /* NSBundle+STQRCodeController.m */,
+				708550FB1DFFF3E700C243ED /* STQRCodeAlert.h */,
+				708550FC1DFFF3E700C243ED /* STQRCodeAlert.m */,
+				708550FD1DFFF3E700C243ED /* STQRCodeConst.h */,
+				708550FE1DFFF3E700C243ED /* STQRCodeConst.m */,
+				708550FF1DFFF3E700C243ED /* STQRCodeController.bundle */,
+				708551001DFFF3E700C243ED /* STQRCodeController.h */,
+				708551011DFFF3E700C243ED /* STQRCodeController.m */,
+				708551021DFFF3E700C243ED /* STQRCodeReaderView.h */,
+				708551031DFFF3E700C243ED /* STQRCodeReaderView.m */,
+			);
+			path = STQRCodeController;
+			sourceTree = "<group>";
+		};
+		7092D4AE1DED69ED00E9A998 = {
+			isa = PBXGroup;
+			children = (
+				7092D4B91DED69ED00E9A998 /* STQRCodeControllerDemo */,
+				7092D4B81DED69ED00E9A998 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7092D4B81DED69ED00E9A998 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7092D4B71DED69ED00E9A998 /* STQRCodeControllerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7092D4B91DED69ED00E9A998 /* STQRCodeControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				708550F81DFFF3E700C243ED /* STQRCodeController */,
+				7092D4BD1DED69ED00E9A998 /* AppDelegate.h */,
+				7092D4BE1DED69ED00E9A998 /* AppDelegate.m */,
+				7085510A1DFFF43300C243ED /* TestController.h */,
+				7085510B1DFFF43300C243ED /* TestController.m */,
+				7092D4C61DED69ED00E9A998 /* Assets.xcassets */,
+				7092D4C81DED69ED00E9A998 /* LaunchScreen.storyboard */,
+				7092D4CB1DED69ED00E9A998 /* Info.plist */,
+				7092D4BA1DED69ED00E9A998 /* Supporting Files */,
+			);
+			path = STQRCodeControllerDemo;
+			sourceTree = "<group>";
+		};
+		7092D4BA1DED69ED00E9A998 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7092D4BB1DED69ED00E9A998 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7092D4B61DED69ED00E9A998 /* STQRCodeControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7092D4CE1DED69ED00E9A998 /* Build configuration list for PBXNativeTarget "STQRCodeControllerDemo" */;
+			buildPhases = (
+				7092D4B31DED69ED00E9A998 /* Sources */,
+				7092D4B41DED69ED00E9A998 /* Frameworks */,
+				7092D4B51DED69ED00E9A998 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STQRCodeControllerDemo;
+			productName = STQRCodeControllerDemo;
+			productReference = 7092D4B71DED69ED00E9A998 /* STQRCodeControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7092D4AF1DED69ED00E9A998 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ST;
+				TargetAttributes = {
+					7092D4B61DED69ED00E9A998 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Z25J3BA353;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7092D4B21DED69ED00E9A998 /* Build configuration list for PBXProject "STQRCodeControllerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7092D4AE1DED69ED00E9A998;
+			productRefGroup = 7092D4B81DED69ED00E9A998 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7092D4B61DED69ED00E9A998 /* STQRCodeControllerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7092D4B51DED69ED00E9A998 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708551071DFFF3E700C243ED /* STQRCodeController.bundle in Resources */,
+				7092D4CA1DED69ED00E9A998 /* LaunchScreen.storyboard in Resources */,
+				7092D4C71DED69ED00E9A998 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7092D4B31DED69ED00E9A998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708551051DFFF3E700C243ED /* STQRCodeAlert.m in Sources */,
+				708551091DFFF3E700C243ED /* STQRCodeReaderView.m in Sources */,
+				708551081DFFF3E700C243ED /* STQRCodeController.m in Sources */,
+				7092D4BF1DED69ED00E9A998 /* AppDelegate.m in Sources */,
+				7092D4BC1DED69ED00E9A998 /* main.m in Sources */,
+				708551061DFFF3E700C243ED /* STQRCodeConst.m in Sources */,
+				7085510C1DFFF43300C243ED /* TestController.m in Sources */,
+				708551041DFFF3E700C243ED /* NSBundle+STQRCodeController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7092D4C81DED69ED00E9A998 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7092D4C91DED69ED00E9A998 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7092D4CC1DED69ED00E9A998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7092D4CD1DED69ED00E9A998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7092D4CF1DED69ED00E9A998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z25J3BA353;
+				INFOPLIST_FILE = STQRCodeControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.st.cn.st0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7092D4D01DED69ED00E9A998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z25J3BA353;
+				INFOPLIST_FILE = STQRCodeControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.st.cn.st0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7092D4B21DED69ED00E9A998 /* Build configuration list for PBXProject "STQRCodeControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7092D4CC1DED69ED00E9A998 /* Debug */,
+				7092D4CD1DED69ED00E9A998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7092D4CE1DED69ED00E9A998 /* Build configuration list for PBXNativeTarget "STQRCodeControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7092D4CF1DED69ED00E9A998 /* Debug */,
+				7092D4D01DED69ED00E9A998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7092D4AF1DED69ED00E9A998 /* Project object */;
+}
