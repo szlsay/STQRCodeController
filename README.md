@@ -29,9 +29,16 @@
 ![](https://raw.githubusercontent.com/STShenZhaoliang/STImage/master/STQRCodeController/STQRCodeController.gif)
 
 # 版本信息
+## 1.2
+1. 添加提示语
+2. 修改状态栏在跳转相册时候的问题
+3. 完善Carthage使用
+4. 对iOS7支持
+
 ## 1.1
 1. 添加权限检测
 2. 添加Carthage的支持
+
 ## 1.0
 1. 支持iOS8以上，分别在iOS8.2、iOS9.3、iOS10.1的系统中测试通过
 2. 支持图片识别，可从相册中获取
