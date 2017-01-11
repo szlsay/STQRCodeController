@@ -34,9 +34,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     // 2.设置UIBarButtonItem， iOS8系统之后才支持本地扫描
-    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"相册" style:UIBarButtonItemStyleDone target:self action:@selector(alumbEvent)];
-    self.navigationItem.rightBarButtonItem = rightItem;
-    
+    if ([UIDevice currentDevice].systemVersion.intValue >= 8) {
+        UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"相册" style:UIBarButtonItemStyleDone target:self action:@selector(alumbEvent)];
+        self.navigationItem.rightBarButtonItem = rightItem;
+    }
+
     UIBarButtonItem * leftItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(backEvent)];
     self.navigationItem.leftBarButtonItem = leftItem;
     
@@ -87,6 +89,9 @@
     
     // 2.退出图片控制器
     [picker dismissViewControllerAnimated:YES completion:^{
+        
+        [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
+        
         NSArray *features = [self.detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
         if (features.count) { // 1.识别到二维码
             
@@ -116,7 +121,9 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    [picker dismissViewControllerAnimated:YES completion:^{}];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
+    }];
 }
 
 #pragma mark - --- STQRCodeReaderView Delegate
@@ -150,16 +157,16 @@
 {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) { //判断设备是否支持相册
         [STQRCodeAlert showWithTitle:@"未开启访问相册权限，请在设置中开始"];
-        return;
+    }else {
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        imagePickerController.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+        imagePickerController.allowsEditing = YES;
+        imagePickerController.delegate = self;
+        [self presentViewController:imagePickerController animated:YES completion:^{
+            [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleDefault];
+        }];
     }
-    
-    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    imagePickerController.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
-    imagePickerController.allowsEditing = YES;
-    imagePickerController.delegate = self;
-    [self presentViewController:imagePickerController animated:YES completion:^{
-    }];
 }
 
 #pragma mark - --- 4.private methods 私有方法 ---

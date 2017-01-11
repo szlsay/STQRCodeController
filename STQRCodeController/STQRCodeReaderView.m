@@ -24,6 +24,8 @@
 @property(nonatomic, strong)UIButton *buttonTurn;
 /** 6.移动的图片 */
 @property(nonatomic, strong)UIImageView *imageMove;
+/** 7.提示语 */
+@property(nonatomic, strong)UILabel *labelAlert;
 
 /** 开始扫描动画 */
 - (void)startAnimation;
@@ -61,6 +63,7 @@
     [super layoutSubviews];
     self.imageScanZone.frame = self.rectScanZone;
     self.buttonTurn.center = CGPointMake(self.imageScanZone.center.x, CGRectGetMaxY(self.imageScanZone.frame) + 100);
+    self.labelAlert.center = CGPointMake(self.imageScanZone.center.x, CGRectGetMaxY(self.imageScanZone.frame) + 20);
 }
 
 - (void)setupDefault
@@ -72,6 +75,7 @@
     [self addSubview:self.imageMove];
     [self addSubview:self.imageScanZone];
     [self addSubview:self.buttonTurn];
+    [self addSubview:self.labelAlert];
     
     // 2.采样的区域
     AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];
@@ -273,5 +277,21 @@
         [_buttonTurn addTarget:self action:@selector(turnTorchEvent:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _buttonTurn;
+}
+
+- (UILabel *)labelAlert
+{
+    if (!_labelAlert) {
+        CGFloat viewW = ST_QRCODE_ScreenWidth;
+        CGFloat viewH = 17;
+        CGFloat viewX = 0;
+        CGFloat viewY = 0;
+        _labelAlert = [[UILabel alloc]initWithFrame:CGRectMake(viewX, viewY, viewW, viewH)];
+        [_labelAlert setText:@"将二维码/条形码放置框内，即开始扫描"];
+        [_labelAlert setTextColor:[UIColor whiteColor]];
+        [_labelAlert setFont:[UIFont systemFontOfSize:15]];
+        [_labelAlert setTextAlignment:NSTextAlignmentCenter];
+    }
+    return _labelAlert;
 }
 @end
