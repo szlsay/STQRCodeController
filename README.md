@@ -28,4 +28,4 @@
 # 效果图
 ![](https://raw.githubusercontent.com/STShenZhaoliang/STImage/master/STQRCodeController/STQRCodeController.gif)
 
-# 版本信息
+# [版本信息](https://github.com/STShenZhaoliang/STQRCodeController/blob/master/CHANGELOG.md)
