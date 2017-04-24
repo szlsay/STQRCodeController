@@ -5,7 +5,7 @@
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform info](https://img.shields.io/cocoapods/p/STQRCodeController.svg?style=flat)](http://cocoadocs.org/docsets/STQRCodeController)
 
-一个简单使用的二维码识别控制器，代码量不到600行
+一个简单使用的二维码识别控制器，代码量不到1000行
 
 # 使用方法
 

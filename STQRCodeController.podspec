@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name     = 'STQRCodeController'
-s.version  = '1.2'
+s.version  = '1.3'
 s.license = { :type => 'MIT', :file => 'LICENSE'}
 s.summary  = '千行代码搞定二维码扫描'
 s.homepage = 'https://github.com/STShenZhaoliang'
