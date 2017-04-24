@@ -24,6 +24,13 @@
 	<string>开启相机</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>开启相册</string>
+    <!-- 麦克风 -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>App需要您的同意,才能访问麦克风</string>
+    <!-- 媒体资料库 -->
+    <key>NSAppleMusicUsageDescription</key>
+    <string>App需要您的同意,才能访问媒体资料库</string>
+    
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

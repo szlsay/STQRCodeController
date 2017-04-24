@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, STQRCodeResultType) {
     STQRCodeResultTypeSuccess = 0, // 1.成功获取图片中的二维码信息
     STQRCodeResultTypeNoInfo = 1,  // 2.识别的图片没有二维码信息
@@ -19,6 +21,13 @@ typedef NS_ENUM(NSUInteger, STQRCodeResultType) {
 @protocol STQRCodeControllerDelegate <NSObject>
 - (void)qrcodeController:(STQRCodeController *)qrcodeController readerScanResult:(NSString *)readerScanResult type:(STQRCodeResultType)resultType;
 @end
+
 @interface STQRCodeController : UIViewController
 @property(nonatomic, weak)id<STQRCodeControllerDelegate>delegate;
+    
+// 点击控制器返回事件 与 成功控制器返回事件
+- (void)backButtonEvent;
+- (void)backSuccessEvent;
 @end
+
+NS_ASSUME_NONNULL_END

@@ -25,5 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 关闭扫描 */
 - (void)stopScan;
+    
+/** 1.设置闪关灯开始 */
+@property(nonatomic, assign)BOOL turnOn;
 @end
 NS_ASSUME_NONNULL_END

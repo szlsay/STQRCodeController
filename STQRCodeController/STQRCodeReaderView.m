@@ -118,22 +118,17 @@
 
 - (void)turnTorchEvent:(UIButton *)button
 {
-    button.selected = !button.selected;
-    Class captureDeviceClass = NSClassFromString(@"AVCaptureDevice");
-    if (captureDeviceClass != nil) {
-        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-        if ([device hasTorch] && [device hasFlash]){
-            
-            [device lockForConfiguration:nil];
-            if (button.selected) {
-                [device setTorchMode:AVCaptureTorchModeOn];
-                [device setFlashMode:AVCaptureFlashModeOn];
-            } else {
-                [device setTorchMode:AVCaptureTorchModeOff];
-                [device setFlashMode:AVCaptureFlashModeOff];
-            }
-            [device unlockForConfiguration];
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if ([device hasTorch] && [device hasFlash]){
+        [device lockForConfiguration:nil];
+        if (!button.selected) {
+            [device setTorchMode:AVCaptureTorchModeOn];
+            [device setFlashMode:AVCaptureFlashModeOn];
+        } else {
+            [device setTorchMode:AVCaptureTorchModeOff];
+            [device setFlashMode:AVCaptureFlashModeOff];
         }
+        [device unlockForConfiguration];
     }
 }
 
@@ -179,6 +174,12 @@
 }
 #pragma mark - --- 5.setters 属性 ---
 
+- (void)setTurnOn:(BOOL)turnOn
+{
+    _turnOn = turnOn;
+    self.buttonTurn.selected = turnOn;
+}
+    
 #pragma mark - --- 6.getters 属性 —--
 
 - (UIImageView *)imageScanZone{
