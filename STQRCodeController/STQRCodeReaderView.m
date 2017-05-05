@@ -10,8 +10,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import "STQRCodeConst.h"
 #import "NSBundle+STQRCodeController.h"
+#import <ImageIO/ImageIO.h>
 
-@interface STQRCodeReaderView ()<AVCaptureMetadataOutputObjectsDelegate>
+@interface STQRCodeReaderView ()<AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 /** 1.中间扫描图片 */
 @property(nonatomic, strong)UIImageView *imageScanZone;
 /** 2.扫描的尺寸 */
@@ -26,6 +27,8 @@
 @property(nonatomic, strong)UIImageView *imageMove;
 /** 7.提示语 */
 @property(nonatomic, strong)UILabel *labelAlert;
+/** 8.获取视频输出 */
+@property(nonatomic, strong)AVCaptureVideoDataOutput *captureVideoDataOutput;
 
 /** 开始扫描动画 */
 - (void)startAnimation;
@@ -77,6 +80,8 @@
     [self addSubview:self.buttonTurn];
     [self addSubview:self.labelAlert];
     
+    _openDetection = YES;
+    
     // 2.采样的区域
     AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];
     layer.videoGravity=AVLayerVideoGravityResizeAspectFill;
@@ -89,6 +94,44 @@
 }
 
 #pragma mark - --- 2.delegate 视图委托 ---
+
+
+#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection{
+    /**
+     *  1.获取CMSampleBuffer的数目,0的话没有数据,发生错误了.
+     *  2.CMSampleBuffer 无效
+     *  3.CMSampleBuffer 数据没准备好
+     */
+    if (self.openDetection) {
+        if ((CMSampleBufferGetNumSamples(sampleBuffer) == 0) || !CMSampleBufferIsValid(sampleBuffer) || !CMSampleBufferDataIsReady(sampleBuffer)) {
+            //为无效的 CMSampleBuffer ,没有必要进行后面的逻辑!
+            return;
+        }
+        CFDictionaryRef metadataDict = CMCopyDictionaryOfAttachments(NULL,
+                                                                     sampleBuffer, kCMAttachmentMode_ShouldPropagate);
+        NSDictionary *metadata = [[NSMutableDictionary alloc]
+                                  initWithDictionary:(__bridge NSDictionary*)metadataDict];
+        CFRelease(metadataDict);
+        NSDictionary *exifMetadata = [[metadata
+                                       objectForKey:(NSString *)kCGImagePropertyExifDictionary] mutableCopy];
+        float brightnessValue = [[exifMetadata
+                                  objectForKey:(NSString *)kCGImagePropertyExifBrightnessValue] floatValue];
+        NSLog(@"%s %f", __FUNCTION__, brightnessValue);
+        if (brightnessValue <= 0) {
+            if (!self.buttonTurn.selected) {
+                self.openDetection = NO;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self turnTorchEvent:self.buttonTurn];
+                    [self setTurnOn:YES];
+                    //              [self.captureSession removeOutput:self.captureVideoDataOutput];
+                });
+                
+            }
+        }
+    }
+}
+
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
     if (metadataObjects && metadataObjects.count > 0 ) {
@@ -233,8 +276,48 @@
             }
             output.metadataObjectTypes = array;
         }
+        
+        
+        if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset3840x2160]) {
+            _captureSession.sessionPreset = AVCaptureSessionPreset3840x2160;//4k
+        }else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1920x1080]){
+            _captureSession.sessionPreset = AVCaptureSessionPreset1920x1080;//1080P
+        }else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]){
+            _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;//1080P
+        }else if ([_captureSession canSetSessionPreset:AVCaptureSessionPresetHigh]){
+            _captureSession.sessionPreset = AVCaptureSessionPresetHigh;//High
+        }else{
+            //weakSelf.captureSession.sessionPreset = deafault value (AVCaptureSessionPresetHigh)
+        }
+        
+        
+        //session addOutput
+        if ([_captureSession canAddOutput:self.captureVideoDataOutput]) {
+            [_captureSession addOutput:self.captureVideoDataOutput];
+        }
+
     }
     return _captureSession;
+}
+
+- (AVCaptureVideoDataOutput *)captureVideoDataOutput{
+    if (!_captureVideoDataOutput) {
+        //
+        _captureVideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
+        /*
+         .videoSettings 如果设置为nil , 之后才读取.videoSettings 不会是nil ,而是AVCaptureSession.sessionPreset的值 , 这就表示 以无压缩的格式 接收视频帧
+         在iOS上, videoSettings 唯一支持的key 只有kCVPixelBufferPixelFormatTypeKey
+         value只有3种:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange / kCVPixelFormatType_420YpCbCr8BiPlanarFullRange / kCVPixelFormatType_32BGRA
+         */
+        _captureVideoDataOutput.videoSettings = @{(NSString *)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_32BGRA)};
+        //丢弃掉延迟的视频帧,不再传给buffer queue
+        _captureVideoDataOutput.alwaysDiscardsLateVideoFrames = YES;
+        
+        dispatch_queue_t videoDataOutputQueue = dispatch_queue_create("com.CircleLi_VideoDataOutputQueue.www", DISPATCH_QUEUE_SERIAL);//必须是串行队列, 保证视频帧按顺序传递
+        [_captureVideoDataOutput setSampleBufferDelegate:self queue:videoDataOutputQueue];
+        
+    }
+    return _captureVideoDataOutput;
 }
 
 - (UIView *)viewMask
@@ -252,8 +335,6 @@
     }
     return _viewMask;
 }
-
-
 
 - (UIImageView *)imageMove
 {

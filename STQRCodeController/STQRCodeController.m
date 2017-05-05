@@ -19,13 +19,13 @@
     // 1.记录之前的状态
     UIBarStyle _originBarStyle;
 }
-    /** 1.读取二维码界面 */
-    @property(nonatomic, strong)STQRCodeReaderView *readview;
-    /** 2.图片探测器 */
-    @property(nonatomic, strong)CIDetector *detector;
-    /** 4.定时器 */
-    @property(nonatomic, strong)NSTimer *timer ;
-    @end
+/** 1.读取二维码界面 */
+@property(nonatomic, strong)STQRCodeReaderView *readview;
+/** 2.图片探测器 */
+@property(nonatomic, strong)CIDetector *detector;
+/** 4.定时器 */
+@property(nonatomic, strong)NSTimer *timer ;
+@end
 
 @implementation STQRCodeController
     

@@ -66,17 +66,17 @@
 		709EB1671E25DC7B00342CB1 /* STQRCodeController */ = {
 			isa = PBXGroup;
 			children = (
+				709EB1751E25DD1D00342CB1 /* STQRCodeReaderView.h */,
 				709EB1701E25DD1D00342CB1 /* STQRCodeReaderView.m */,
+				709EB1681E25DC7B00342CB1 /* STQRCodeController.h */,
 				709EB1711E25DD1D00342CB1 /* STQRCodeController.m */,
 				709EB1721E25DD1D00342CB1 /* STQRCodeController.bundle */,
 				709EB1731E25DD1D00342CB1 /* NSBundle+STQRCodeController.h */,
 				709EB1741E25DD1D00342CB1 /* NSBundle+STQRCodeController.m */,
-				709EB1751E25DD1D00342CB1 /* STQRCodeReaderView.h */,
 				709EB1761E25DD1D00342CB1 /* STQRCodeConst.h */,
 				709EB1771E25DD1D00342CB1 /* STQRCodeConst.m */,
 				709EB1781E25DD1D00342CB1 /* STQRCodeAlert.h */,
 				709EB1791E25DD1D00342CB1 /* STQRCodeAlert.m */,
-				709EB1681E25DC7B00342CB1 /* STQRCodeController.h */,
 				709EB1691E25DC7B00342CB1 /* Info.plist */,
 			);
 			path = STQRCodeController;

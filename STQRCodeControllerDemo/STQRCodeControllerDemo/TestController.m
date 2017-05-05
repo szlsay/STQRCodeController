@@ -31,6 +31,11 @@
 {
      NSLog(@"%s %@", __FUNCTION__, readerScanResult);
      NSLog(@"%s %lu", __FUNCTION__, (unsigned long)resultType);
+    
+    if ((resultType == STQRCodeResultTypeError) || (resultType == STQRCodeResultTypeNoInfo)) {
+        readerScanResult = @"没有扫描到结果";
+    }
+    
     [STQRCodeAlert showWithTitle:readerScanResult];
 }
 #pragma mark - --- 3.event response 事件相应 ---

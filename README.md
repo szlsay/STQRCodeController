@@ -7,7 +7,7 @@
 
 一个简单使用的二维码识别控制器，代码量不到1000行
 
-# 使用方法
+## 使用方法
 
 使用举例：
 
@@ -25,7 +25,7 @@
     <key>NSPhotoLibraryUsageDescription</key>
     <string>开启相册</string>
  
-# 效果图
+## 效果图
 ![](https://raw.githubusercontent.com/STShenZhaoliang/STImage/master/STQRCodeController/STQRCodeController.gif)
 
-# [版本信息](https://github.com/STShenZhaoliang/STQRCodeController/blob/master/CHANGELOG.md)
+## [版本信息](https://github.com/STShenZhaoliang/STQRCodeController/blob/master/CHANGELOG.md)

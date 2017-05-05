@@ -7,31 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		708551041DFFF3E700C243ED /* NSBundle+STQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 708550FA1DFFF3E700C243ED /* NSBundle+STQRCodeController.m */; };
-		708551051DFFF3E700C243ED /* STQRCodeAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 708550FC1DFFF3E700C243ED /* STQRCodeAlert.m */; };
-		708551061DFFF3E700C243ED /* STQRCodeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 708550FE1DFFF3E700C243ED /* STQRCodeConst.m */; };
-		708551071DFFF3E700C243ED /* STQRCodeController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 708550FF1DFFF3E700C243ED /* STQRCodeController.bundle */; };
-		708551081DFFF3E700C243ED /* STQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 708551011DFFF3E700C243ED /* STQRCodeController.m */; };
-		708551091DFFF3E700C243ED /* STQRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 708551031DFFF3E700C243ED /* STQRCodeReaderView.m */; };
 		7085510C1DFFF43300C243ED /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7085510B1DFFF43300C243ED /* TestController.m */; };
 		7092D4BC1DED69ED00E9A998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7092D4BB1DED69ED00E9A998 /* main.m */; };
 		7092D4BF1DED69ED00E9A998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7092D4BE1DED69ED00E9A998 /* AppDelegate.m */; };
 		7092D4C71DED69ED00E9A998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7092D4C61DED69ED00E9A998 /* Assets.xcassets */; };
 		7092D4CA1DED69ED00E9A998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7092D4C81DED69ED00E9A998 /* LaunchScreen.storyboard */; };
+		70B0DED21EBC61A200837A55 /* NSBundle+STQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B0DEC71EBC61A200837A55 /* NSBundle+STQRCodeController.m */; };
+		70B0DED31EBC61A200837A55 /* STQRCodeAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B0DEC91EBC61A200837A55 /* STQRCodeAlert.m */; };
+		70B0DED41EBC61A200837A55 /* STQRCodeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B0DECB1EBC61A200837A55 /* STQRCodeConst.m */; };
+		70B0DED51EBC61A200837A55 /* STQRCodeController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70B0DECC1EBC61A200837A55 /* STQRCodeController.bundle */; };
+		70B0DED61EBC61A200837A55 /* STQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B0DECE1EBC61A200837A55 /* STQRCodeController.m */; };
+		70B0DED71EBC61A200837A55 /* STQRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B0DED01EBC61A200837A55 /* STQRCodeReaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		708550F91DFFF3E700C243ED /* NSBundle+STQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+STQRCodeController.h"; sourceTree = "<group>"; };
-		708550FA1DFFF3E700C243ED /* NSBundle+STQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+STQRCodeController.m"; sourceTree = "<group>"; };
-		708550FB1DFFF3E700C243ED /* STQRCodeAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeAlert.h; sourceTree = "<group>"; };
-		708550FC1DFFF3E700C243ED /* STQRCodeAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeAlert.m; sourceTree = "<group>"; };
-		708550FD1DFFF3E700C243ED /* STQRCodeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeConst.h; sourceTree = "<group>"; };
-		708550FE1DFFF3E700C243ED /* STQRCodeConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeConst.m; sourceTree = "<group>"; };
-		708550FF1DFFF3E700C243ED /* STQRCodeController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = STQRCodeController.bundle; sourceTree = "<group>"; };
-		708551001DFFF3E700C243ED /* STQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeController.h; sourceTree = "<group>"; };
-		708551011DFFF3E700C243ED /* STQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeController.m; sourceTree = "<group>"; };
-		708551021DFFF3E700C243ED /* STQRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeReaderView.h; sourceTree = "<group>"; };
-		708551031DFFF3E700C243ED /* STQRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeReaderView.m; sourceTree = "<group>"; };
 		7085510A1DFFF43300C243ED /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
 		7085510B1DFFF43300C243ED /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
 		7092D4B71DED69ED00E9A998 /* STQRCodeControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STQRCodeControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +30,17 @@
 		7092D4C61DED69ED00E9A998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7092D4C91DED69ED00E9A998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7092D4CB1DED69ED00E9A998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70B0DEC61EBC61A200837A55 /* NSBundle+STQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+STQRCodeController.h"; sourceTree = "<group>"; };
+		70B0DEC71EBC61A200837A55 /* NSBundle+STQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+STQRCodeController.m"; sourceTree = "<group>"; };
+		70B0DEC81EBC61A200837A55 /* STQRCodeAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeAlert.h; sourceTree = "<group>"; };
+		70B0DEC91EBC61A200837A55 /* STQRCodeAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeAlert.m; sourceTree = "<group>"; };
+		70B0DECA1EBC61A200837A55 /* STQRCodeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeConst.h; sourceTree = "<group>"; };
+		70B0DECB1EBC61A200837A55 /* STQRCodeConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeConst.m; sourceTree = "<group>"; };
+		70B0DECC1EBC61A200837A55 /* STQRCodeController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = STQRCodeController.bundle; sourceTree = "<group>"; };
+		70B0DECD1EBC61A200837A55 /* STQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeController.h; sourceTree = "<group>"; };
+		70B0DECE1EBC61A200837A55 /* STQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeController.m; sourceTree = "<group>"; };
+		70B0DECF1EBC61A200837A55 /* STQRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQRCodeReaderView.h; sourceTree = "<group>"; };
+		70B0DED01EBC61A200837A55 /* STQRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQRCodeReaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,24 +54,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		708550F81DFFF3E700C243ED /* STQRCodeController */ = {
-			isa = PBXGroup;
-			children = (
-				708550F91DFFF3E700C243ED /* NSBundle+STQRCodeController.h */,
-				708550FA1DFFF3E700C243ED /* NSBundle+STQRCodeController.m */,
-				708550FB1DFFF3E700C243ED /* STQRCodeAlert.h */,
-				708550FC1DFFF3E700C243ED /* STQRCodeAlert.m */,
-				708550FD1DFFF3E700C243ED /* STQRCodeConst.h */,
-				708550FE1DFFF3E700C243ED /* STQRCodeConst.m */,
-				708550FF1DFFF3E700C243ED /* STQRCodeController.bundle */,
-				708551001DFFF3E700C243ED /* STQRCodeController.h */,
-				708551011DFFF3E700C243ED /* STQRCodeController.m */,
-				708551021DFFF3E700C243ED /* STQRCodeReaderView.h */,
-				708551031DFFF3E700C243ED /* STQRCodeReaderView.m */,
-			);
-			path = STQRCodeController;
-			sourceTree = "<group>";
-		};
 		7092D4AE1DED69ED00E9A998 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +73,7 @@
 		7092D4B91DED69ED00E9A998 /* STQRCodeControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				708550F81DFFF3E700C243ED /* STQRCodeController */,
+				70B0DEC41EBC61A200837A55 /* STQRCodeController */,
 				7092D4BD1DED69ED00E9A998 /* AppDelegate.h */,
 				7092D4BE1DED69ED00E9A998 /* AppDelegate.m */,
 				7085510A1DFFF43300C243ED /* TestController.h */,
@@ -110,6 +92,25 @@
 				7092D4BB1DED69ED00E9A998 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70B0DEC41EBC61A200837A55 /* STQRCodeController */ = {
+			isa = PBXGroup;
+			children = (
+				70B0DEC61EBC61A200837A55 /* NSBundle+STQRCodeController.h */,
+				70B0DEC71EBC61A200837A55 /* NSBundle+STQRCodeController.m */,
+				70B0DEC81EBC61A200837A55 /* STQRCodeAlert.h */,
+				70B0DEC91EBC61A200837A55 /* STQRCodeAlert.m */,
+				70B0DECA1EBC61A200837A55 /* STQRCodeConst.h */,
+				70B0DECB1EBC61A200837A55 /* STQRCodeConst.m */,
+				70B0DECC1EBC61A200837A55 /* STQRCodeController.bundle */,
+				70B0DECD1EBC61A200837A55 /* STQRCodeController.h */,
+				70B0DECE1EBC61A200837A55 /* STQRCodeController.m */,
+				70B0DECF1EBC61A200837A55 /* STQRCodeReaderView.h */,
+				70B0DED01EBC61A200837A55 /* STQRCodeReaderView.m */,
+			);
+			name = STQRCodeController;
+			path = ../../STQRCodeController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,9 +172,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				708551071DFFF3E700C243ED /* STQRCodeController.bundle in Resources */,
 				7092D4CA1DED69ED00E9A998 /* LaunchScreen.storyboard in Resources */,
 				7092D4C71DED69ED00E9A998 /* Assets.xcassets in Resources */,
+				70B0DED51EBC61A200837A55 /* STQRCodeController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,14 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				708551051DFFF3E700C243ED /* STQRCodeAlert.m in Sources */,
-				708551091DFFF3E700C243ED /* STQRCodeReaderView.m in Sources */,
-				708551081DFFF3E700C243ED /* STQRCodeController.m in Sources */,
+				70B0DED31EBC61A200837A55 /* STQRCodeAlert.m in Sources */,
 				7092D4BF1DED69ED00E9A998 /* AppDelegate.m in Sources */,
+				70B0DED71EBC61A200837A55 /* STQRCodeReaderView.m in Sources */,
+				70B0DED61EBC61A200837A55 /* STQRCodeController.m in Sources */,
 				7092D4BC1DED69ED00E9A998 /* main.m in Sources */,
-				708551061DFFF3E700C243ED /* STQRCodeConst.m in Sources */,
 				7085510C1DFFF43300C243ED /* TestController.m in Sources */,
-				708551041DFFF3E700C243ED /* NSBundle+STQRCodeController.m in Sources */,
+				70B0DED41EBC61A200837A55 /* STQRCodeConst.m in Sources */,
+				70B0DED21EBC61A200837A55 /* NSBundle+STQRCodeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

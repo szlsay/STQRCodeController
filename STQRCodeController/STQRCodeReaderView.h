@@ -22,11 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 开启扫描 */
 - (void)startScan;
-
 /** 关闭扫描 */
 - (void)stopScan;
-    
 /** 1.设置闪关灯开始 */
 @property(nonatomic, assign)BOOL turnOn;
+/** 2.是否开启手机环境光线检测，default is YES */
+@property(nonatomic, assign)BOOL openDetection;
 @end
 NS_ASSUME_NONNULL_END

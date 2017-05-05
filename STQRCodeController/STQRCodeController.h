@@ -20,11 +20,11 @@ typedef NS_ENUM(NSUInteger, STQRCodeResultType) {
 
 @protocol STQRCodeControllerDelegate <NSObject>
 - (void)qrcodeController:(STQRCodeController *)qrcodeController readerScanResult:(NSString *)readerScanResult type:(STQRCodeResultType)resultType;
-    @end
+@end
+
 @interface STQRCodeController : UIViewController
-    @property(nonatomic, weak)id<STQRCodeControllerDelegate>delegate;
-    
-    // 点击控制器返回事件 与 成功控制器返回事件
+@property(nonatomic, weak)id<STQRCodeControllerDelegate>delegate;
+// 点击控制器返回事件 与 成功控制器返回事件
 - (void)backButtonEvent;
 - (void)backSuccessEvent;
 @end
